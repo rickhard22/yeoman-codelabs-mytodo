@@ -22,7 +22,9 @@ function setup() {
 describe('components', () => {
   describe('Header', () => {
     it('should render correctly', () => {
-      const {output} = setup();
+      const {
+        output
+      } = setup();
 
       expect(output.type).toBe('header');
       expect(output.props.className).toBe('header');
@@ -34,11 +36,14 @@ describe('components', () => {
 
       expect(input.type).toBe(TodoTextInput);
       expect(input.props.newTodo).toBe(true);
-      expect(input.props.placeholder).toBe('What needs to be done?');
+      expect(input.props.placeholder).toBe('What needs to be done, old chap?');
     });
 
     it('should call addTodo if length of text is greater than 0', () => {
-      const {output, props} = setup();
+      const {
+        output,
+        props
+      } = setup();
       const input = output.props.children[1];
       input.props.onSave('');
       expect(props.addTodo.calls.count()).toBe(0);

@@ -1,4 +1,7 @@
-import React, {PropTypes, Component} from 'react';
+import React, {
+  PropTypes,
+  Component
+} from 'react';
 import TodoTextInput from './TodoTextInput';
 
 class Header extends Component {
@@ -20,7 +23,7 @@ class Header extends Component {
         <TodoTextInput
           newTodo
           onSave={this.handleSave}
-          placeholder="What needs to be done?"
+          placeholder="What needs to be done, old chap?"
           />
       </header>
     );
